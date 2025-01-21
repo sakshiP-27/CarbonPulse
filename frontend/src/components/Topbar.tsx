@@ -10,7 +10,7 @@ export const Topbar = () => {
         </div>
         <div className="flex space-x-2 px-8 py-4 relative">
             <span className="transition-all duration-500 text-base rounded-xl hover:bg-yellow-300 hover:text-white text-black py-2 px-5 cursor-pointer">
-                Contact Us
+                FAQs
             </span>
             <span className="transition-all duration-500 text-base rounded-xl hover:bg-yellow-500 hover:text-white text-black py-2 px-5 cursor-pointer">
                 About

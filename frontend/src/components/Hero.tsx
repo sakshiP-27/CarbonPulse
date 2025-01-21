@@ -13,11 +13,11 @@ export const Hero = () => {
 }
 
 const HeroImage = () => {
-    return <div className="w-full overflow-hidden px-6">
+    return <div className="w-full overflow-hidden">
         <img 
             src="/src/assets/imgs/hero_image.jpg" 
             alt="hero image"
-            className="w-full h-96 rounded-2xl shadow-2xl"
+            className="w-full h-96"
         />
     </div>
 }
