@@ -1,6 +1,9 @@
 export const MainContent = () => {
     return <div className="w-full px-12">
         <CardBoard />
+        <div className="flex justify-center mt-8 text-black text-5xl text-center font-coustard font-bold tracking-tighter">
+            Features
+        </div>
         <Cards />
     </div>
 }
@@ -27,7 +30,57 @@ export const CardBoard = () => {
 }
 
 export const Cards = () => {
-    return <div className="flex w-full">
-
+    return <div className="flex w-full p-2 mt-4 space-x-4">
+        {/* Card 1 */}
+        <div className="w-1/3 h-96 p-5 flex-col hover:shadow-2xl transition-shadow duration-200">
+            <div className="w-full h-3/5">
+                <img 
+                    src="/src/assets/imgs/Activity_Tracker.png" 
+                    alt="Activity Tracker"
+                    className="w-full h-full" 
+                />
+            </div>
+            <div className="w-full h-2/5 px-2 py-5">
+                <span className="font-bold text-xl">Daily Tracker</span>
+                <br />
+                <span>
+                    Track you daily carbon footprints through an interactive activity log.
+                </span>
+            </div>
+        </div>
+        {/* Card 2 */}
+        <div className="w-1/3 h-96 p-5 flex-col hover:shadow-2xl transition-shadow duration-200">
+            <div className="w-full h-3/5">
+                <img 
+                    src="/src/assets/imgs/Activity_Prediction.png" 
+                    alt="Activity Prediction"
+                    className="w-full h-full" 
+                />
+            </div>
+            <div className="w-full h-2/5 px-2 py-5">
+                <span className="font-bold text-xl">Activity Prediction</span>
+                <br />
+                <span>
+                    An effective prediction of carbon emmissions a user would produce next day based on current days' activities
+                </span>
+            </div>
+        </div>
+        {/* Card 3 */}
+        <div className="w-1/3 h-96 p-5 flex-col hover:shadow-2xl transition-shadow duration-200">
+            <div className="w-full h-3/5">
+                <img 
+                    src="/src/assets/imgs/Personalized_Recommendation.png" 
+                    alt="Personalized Recommendation"
+                    className="w-full h-full" 
+                />
+            </div>
+            <div className="w-full h-2/5 px-2 py-5">
+                <span className="font-bold text-xl">Personalized Recommendations</span>
+                <br />
+                <span>
+                    Get personalized recommendations to reduce your carbon footprint based on your daily activities.
+                </span>
+            </div>
+        </div>
     </div>
 }

@@ -1,15 +1,11 @@
 import './App.css'
 import './index.css'
-import { Hero } from './components/Hero'
-import { Topbar } from './components/Topbar'
-import { MainContent } from './components/MainContent'
+import { Landing } from './pages/Landing'
 
 function App() {
   return (
     <div className='h-full'>
-      <Topbar />
-      <Hero />
-      <MainContent />
+      <Landing />
     </div>
   )
 }
