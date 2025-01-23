@@ -25,7 +25,7 @@ export const Footer = () => {
                     strokeLinejoin="round"
                 ></path>
             </svg>
-            2025 Carfted by yours truly,{" "}
+            2025 Crafted by yours truly,{" "}
             <a
                 href="https://www.linkedin.com/in/sakshi-paygude/"
                 className="text-black underline"
