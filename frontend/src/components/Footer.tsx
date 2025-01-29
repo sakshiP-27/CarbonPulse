@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <div className="w-full h-20 bg-gradient-to-t from-green-700 to-white justify-center flex items-center text-black gap-2 mt-12">
+        <div className="w-full h-20 bg-gradient-to-t from-[#F3CE51] to-white justify-center flex items-center text-black gap-2 mt-12">
             <svg
                 width="24px"
                 height="24px"
