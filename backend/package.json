@@ -21,6 +21,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.0",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "http-status-codes": "^2.3.0"
