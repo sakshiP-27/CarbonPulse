@@ -1,11 +1,22 @@
+# node modules folders
 backend/node_modules/
 frontend/node_modules/
 
+# virtual environments
 ml_model/venv/
 
+# dist folders
 backend/dist/
 frontend/dist/
 
+# datasets
+ml_model/Carbon_Emission.csv
+
+# Environment variables
 backend/.env
 
+# DS Store files
 **/.DS_Store
+
+# Development notes
+dev_notes.md
