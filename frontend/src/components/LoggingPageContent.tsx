@@ -27,21 +27,6 @@ export const ActivityLogBox = () => {
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                         Using Air Conditioner
                     </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
-                        Boiling Water
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
-                        Commuting
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
-                        Using Air Conditioner
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
-                        Boiling Water
-                    </div>
-                    <div className="bg-white p-4 rounded-lg shadow-sm">
-                        Commuting
-                    </div>
                 </div>
             </div>
         </div>

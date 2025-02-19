@@ -4,10 +4,11 @@
   "description": "Carbon Footprint Application Backend",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "nodemon --exec ts-node src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc -b",
+    "watch": "npx tsc -w",
+    "prestart": "npm run build",
+    "start": "npx nodemon dist/index.js",
+    "dev": "npx concurrently --kill-others \"npm run watch\" \"npm run start\""
   },
   "author": "Sakshi Paygude",
   "license": "ISC",
@@ -21,6 +22,8 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.0",
+    "concurrently": "^9.1.2",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "http-status-codes": "^2.3.0"

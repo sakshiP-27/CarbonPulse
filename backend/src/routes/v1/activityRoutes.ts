@@ -4,7 +4,7 @@ import activityController from "../../controllers/activityController";
 
 const activityRouter = express.Router();
 
-activityRouter.get("/", activityController.logNewActivity);
+activityRouter.get("/", activityController.getActivities);
 
 activityRouter.post("/log", activityController.logNewActivity);
 
