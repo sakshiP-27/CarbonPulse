@@ -13,19 +13,29 @@ model User {
   password        String
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
-  activities      Activity[]
+  activities      UserActivity[]
   recommendations Recommendation[]
 }
 
 model Activity {
-  id               Int      @id @default(autoincrement())
+  id               Int            @id @default(autoincrement())
   title            String
   description      String
   carbon_footprint Int
-  user_id          Int
-  user             User     @relation(fields: [user_id], references: [id])
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  createdAt        DateTime       @default(now())
+  userActivities   UserActivity[]
+}
+
+model UserActivity {
+  id          Int      @id @default(autoincrement())
+  user_id     Int
+  activity_id Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations using for retrieving data
+  user     User     @relation(fields: [user_id], references: [id])
+  activity Activity @relation(fields: [activity_id], references: [id])
 }
 
 model Recommendation {
