@@ -1,6 +1,18 @@
 import { TextField, Button } from "@mui/material";
+import { useState } from 'react';
 
-export const SignupBox = () => {
+interface SignupBoxProps {
+  loading: boolean;
+  error: string;
+  success: boolean;
+  onSignup: (userData: { username: string, email: string, password: string }) => void;
+}
+
+export const SignupBox = ({ loading, error, success, onSignup }: SignupBoxProps) => {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <div className="w-80 bg-white shadow-2xl rounded-xl p-6 flex flex-col items-center">
       <img
@@ -18,6 +30,8 @@ export const SignupBox = () => {
           label="Mail"
           variant="outlined"
           className="w-full"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
 
@@ -27,6 +41,8 @@ export const SignupBox = () => {
           label="Username"
           variant="outlined"
           className="w-full"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
       </div>
 
@@ -37,6 +53,8 @@ export const SignupBox = () => {
           type="password"
           autoComplete="new-password"
           className="w-full"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
       </div>
 
@@ -50,12 +68,16 @@ export const SignupBox = () => {
         />
       </div>
 
+      {success && <div className="text-green-500 mb-2">Signup successful! Redirecting...</div>}
+      {error && <div className="text-red-500 mb-2">{error}</div>}
       <Button
         variant="contained"
         className="w-2/4"
-        style={{ backgroundColor: "#b0b0b0", color: "white" }}
+        style={{ backgroundColor: "#4CAF50", color: "white" }}
+        disabled={loading}
+        onClick={() => onSignup({ username, email, password })}
       >
-        Signup
+        {loading ? "Signing up..." : "Signup"}
       </Button>
 
       <a href="/login" className="mt-4 text-slate-700 hover:underline">

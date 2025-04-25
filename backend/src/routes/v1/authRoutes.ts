@@ -8,6 +8,6 @@ authRouter.post("/login", authController.logIn);
 
 authRouter.post("/signup", authController.signUp);
 
-authRouter.post("/forgotpass", authController.forgotPassword);
+authRouter.post("/logout", authController.logOut);
 
 export default authRouter;

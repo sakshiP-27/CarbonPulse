@@ -9,32 +9,53 @@ datasource db {
 
 model User {
   id              Int              @id @default(autoincrement())
+  name            String
+  gender          String
   email           String           @unique
   password        String
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
-  activities      Activity[]
+  activities      UserActivity[]
   recommendations Recommendation[]
+  prediction      Prediction[]
 }
 
 model Activity {
-  id               Int      @id @default(autoincrement())
+  id               Int            @id @default(autoincrement())
   title            String
   description      String
-  carbon_footprint Int
+  carbon_footprint Float
+  createdAt        DateTime       @default(now())
+  userActivities   UserActivity[]
+}
+
+model UserActivity {
+  id               Int      @id @default(autoincrement())
   user_id          Int
-  user             User     @relation(fields: [user_id], references: [id])
+  activity_id      Int
+  carbon_footprint Float
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
+
+  // Relations using for retrieving data
+  user     User     @relation(fields: [user_id], references: [id])
+  activity Activity @relation(fields: [activity_id], references: [id])
 }
 
 model Recommendation {
   id               Int      @id @default(autoincrement())
   title            String
   description      String
-  carbon_footprint Int
+  carbon_footprint Float
   user_id          Int
   user             User     @relation(fields: [user_id], references: [id])
   createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+}
+
+model Prediction {
+  id                  Int      @id @default(autoincrement())
+  predicted_footprint Float
+  user_id             Int
+  user                User     @relation(fields: [user_id], references: [id])
+  createdAt           DateTime @default(now())
 }
