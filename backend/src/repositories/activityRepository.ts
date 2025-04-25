@@ -30,7 +30,7 @@ export class ActivityRepository {
             const activityId = parseInt(activity_id);
             
             if (isNaN(userId) || isNaN(activityId)) {
-                throw new BadRequestError(user_id ? user_id : activity_id, {
+                throw new BadRequestError((user_id) ? user_id : activity_id, {
                     errorMessage: "UserID or ActivityID sent is invalid"
                 });
             }
