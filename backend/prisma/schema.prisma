@@ -21,17 +21,18 @@ model Activity {
   id               Int            @id @default(autoincrement())
   title            String
   description      String
-  carbon_footprint Int
+  carbon_footprint Float
   createdAt        DateTime       @default(now())
   userActivities   UserActivity[]
 }
 
 model UserActivity {
-  id          Int      @id @default(autoincrement())
-  user_id     Int
-  activity_id Int
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id               Int      @id @default(autoincrement())
+  user_id          Int
+  activity_id      Int
+  carbon_footprint Float
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
 
   // Relations using for retrieving data
   user     User     @relation(fields: [user_id], references: [id])
@@ -42,7 +43,7 @@ model Recommendation {
   id               Int      @id @default(autoincrement())
   title            String
   description      String
-  carbon_footprint Int
+  carbon_footprint Float
   user_id          Int
   user             User     @relation(fields: [user_id], references: [id])
   createdAt        DateTime @default(now())
