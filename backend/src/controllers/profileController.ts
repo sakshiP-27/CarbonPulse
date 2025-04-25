@@ -1,26 +1,47 @@
 import { StatusCodes } from "http-status-codes";
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
+import { ProfileService } from "../services/profileService";
+import { ProfileRepository } from "../repositories/profileRepository";
+import { BadRequestError } from "../errors/BadRequestError";
 
-function getUserProfileDetails(req: Request, res: Response) {
-    // TODO: implement the logic user profile service here
+const profileService = new ProfileService(new ProfileRepository());
 
-    return res.status(StatusCodes.ACCEPTED).json({
-        status: true,
-        message: "User Profile details retrieved!",
-        error: {},
-        // data: userProfileData
-    });
+async function getUserProfileDetails(req: Request, res: Response, next: NextFunction) {
+    try {
+        const { userId } = req.body;
+        if(!userId) {
+            throw new BadRequestError("userId", "userId not passed!");
+        }
+
+        const userData = await profileService.getUserProfile(userId);
+        return res.status(StatusCodes.ACCEPTED).json({
+            status: true,
+            message: "User Profile Details have been retrieved!",
+            error: {},
+            data: userData
+        });
+    } catch(error) {
+        next(error);
+    }
 }
 
-function updateUserProfileDetails(req: Request, res: Response) {
-    // TODO: implement the logic user profile service here
+async function updateUserProfileDetails(req: Request, res: Response, next: NextFunction) {
+    try {
+        const { userId, name, email, gender } = req.body;
+        if(!userId) {
+            throw new BadRequestError("userId", "userId not passed!");
+        }
 
-    return res.status(StatusCodes.CREATED).json({
-        status: true,
-        message: "User Profile Details have been updated!",
-        error: {},
-        // data: userProfileData
-    });
+        const updatedData = await profileService.updateUserProfile(userId, name, gender, email);
+        return res.status(StatusCodes.ACCEPTED).json({
+            status: true,
+            message: "User Profile Details have been updated!",
+            error: {},
+            data: updatedData
+        });
+    } catch(error) {
+        next(error);
+    }
 }
 
 export default {
