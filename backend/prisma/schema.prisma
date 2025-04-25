@@ -17,6 +17,7 @@ model User {
   updatedAt       DateTime         @updatedAt
   activities      UserActivity[]
   recommendations Recommendation[]
+  prediction      Prediction[]
 }
 
 model Activity {
@@ -49,5 +50,12 @@ model Recommendation {
   user_id          Int
   user             User     @relation(fields: [user_id], references: [id])
   createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+}
+
+model Prediction {
+  id                  Int      @id @default(autoincrement())
+  predicted_footprint Float
+  user_id             Int
+  user                User     @relation(fields: [user_id], references: [id])
+  createdAt           DateTime @default(now())
 }
