@@ -43,8 +43,8 @@ CarbonPulse is an application designed to help users estimate their carbon emiss
 
 1. _Datasets Used:_
 
-   - [Individual Carbon Footprint Calculation]("https://www.kaggle.com/datasets/dumanmesut/individual-carbon-footprint-calculation") -> Kaggle
-   - [CO₂ emissions dataset]("https://ourworldindata.org/co2-dataset-sources") -> Our World in Data Website
+   - [Individual Carbon Footprint Calculation](https://www.kaggle.com/datasets/dumanmesut/individual-carbon-footprint-calculation) -> Kaggle
+   - [CO₂ emissions dataset](https://ourworldindata.org/co2-dataset-sources) -> Our World in Data Website
 
 2. _Preprocessing Steps:_
 
@@ -64,23 +64,23 @@ CarbonPulse is an application designed to help users estimate their carbon emiss
 
 ### System Architecture Diagram
 
-![CarbonPulse System Architecture]("docs/Project_Structure.png")
+![CarbonPulse System Architecture](docs/Project_Structure.png)
 
 ### Achievements
 
 1. The project won 1st Prize in a poster competition at **_BCSWomen Lovelace Colloquium_** in the _Final Year Category_ in 2025 held at **_University of Glasgow, Glasgow, Scotland_**.
 
 2. Project Poster:
-   ![CarbonPulse Project Poster]("docs/Competition_Poster.png")
+   ![CarbonPulse Project Poster](docs/Competition_Poster.png)
 
-3. The winning certificate for the competition can be viewed [Here]("https://drive.google.com/file/d/128gMTLFLbcnBjW8-5EXdnHoibuGuRq2w/view?usp=sharing")
+3. The winning certificate for the competition can be viewed [Here](https://drive.google.com/file/d/128gMTLFLbcnBjW8-5EXdnHoibuGuRq2w/view?usp=sharing)
 
-4. More Details about the poster competition and my concept of the poster can be viewed at [Official BCSWomen Website]("https://bcswomenlovelace.bcs.org/?page_id=617")
+4. More Details about the poster competition and my concept of the poster can be viewed at [Official BCSWomen Website](https://bcswomenlovelace.bcs.org/?page_id=617)
 
 ### Acknowledgements
 
-- [Carbon Interface API]("https://docs.carboninterface.com/#/?id=introduction") was used for smooth calculation and estimation of the carbon footprint produced based on the used activities.
-- Inspiration was taken from [WWF]("https://support.wwf.org.uk/adoptions") and [The Nature Conservancy]("https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/?utm_source=chatgpt.com)
+- [Carbon Interface API](https://docs.carboninterface.com/#/?id=introduction) was used for smooth calculation and estimation of the carbon footprint produced based on the used activities.
+- Inspiration was taken from [WWF](https://support.wwf.org.uk/adoptions) and [The Nature Conservancy](https://www.nature.org/en-us/get-involved/how-to-help/carbon-footprint-calculator/?utm_source=chatgpt.com)
 
 ### Thank You
 
