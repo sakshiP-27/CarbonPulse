@@ -70,12 +70,11 @@ CarbonPulse is an application designed to help users estimate their carbon emiss
 
 1. The project won 1st Prize in a poster competition at **_BCSWomen Lovelace Colloquium_** in the _Final Year Category_ in 2025 held at **_University of Glasgow, Glasgow, Scotland_**.
 
-2. Project Poster:
-   ![CarbonPulse Project Poster](docs/Competition_Poster.png)
+![CarbonPulse Project Poster](docs/Competition_Poster.png)
 
-3. The winning certificate for the competition can be viewed [Here](https://drive.google.com/file/d/128gMTLFLbcnBjW8-5EXdnHoibuGuRq2w/view?usp=sharing)
+2. The winning certificate for the competition can be viewed [Here](https://drive.google.com/file/d/128gMTLFLbcnBjW8-5EXdnHoibuGuRq2w/view?usp=sharing)
 
-4. More Details about the poster competition and my concept of the poster can be viewed at [Official BCSWomen Website](https://bcswomenlovelace.bcs.org/?page_id=617)
+3. More Details about the poster competition and my concept of the poster can be viewed at [Official BCSWomen Website](https://bcswomenlovelace.bcs.org/?page_id=617)
 
 ### Acknowledgements
 
